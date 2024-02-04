@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "hypercube"
+version = "0.1.0"
+description = ""
+authors = ["luc"]
+readme = "README.md"
+packages = [ { include = "**/*.py", from = "."  }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyter = "^1.0.0"
+opencv-python = "^4.8.1.78"
+pillow = "^10.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
