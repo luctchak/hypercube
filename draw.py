@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 from card import Card
 from constants import Constants
+from tqdm.notebook import tqdm
 
 def get_masks(img: np.array) -> np.array:
    # Read the image    
@@ -135,7 +136,7 @@ if __name__ == '__main__':
         "empty"
     ]
     QUANTITIES = [1, 2, 3, 4]
-    for symbol in SYMBOLS:
+    for symbol in tqdm(SYMBOLS):
         for fill in FILLS:
             for name, color in COLORS:
                 for quantity in QUANTITIES:
